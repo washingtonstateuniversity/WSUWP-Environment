@@ -67,6 +67,11 @@ Vagrant.configure("2") do |config|
     config.hostsupdater.aliases = hosts
   end
 
+  if defined? VagrantPlugins::HostManager
+    config.hostmanager.include_offline = true
+    config.hostmanager.aliases = [ "test.domain.com" ]
+  end
+
   # Salt Provisioning
   #
   # Map the provisioning directory to the guest machine and initiate the provisioning process
