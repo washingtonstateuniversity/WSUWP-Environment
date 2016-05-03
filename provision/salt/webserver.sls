@@ -162,7 +162,7 @@ nginx-dhparam:
 
 # Add a common configuration for location level request limiting
 # using the zone defined in wsu-nginx-limit-req.conf.
-/etc/ngxin/wsuwp-common-limit.conf:
+/etc/nginx/wsuwp-common-limit.conf:
   file.managed:
     - source:   salt://config/nginx/wsuwp-common-limit.conf
     - user:     root
