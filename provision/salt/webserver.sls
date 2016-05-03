@@ -195,7 +195,7 @@ nginx-dhparam:
     - group: root
     - mode: 664
     - require:
-      - pkg: nginx
+      - cmd: nginx
 
 # Start the nginx service.
 nginx-service:
