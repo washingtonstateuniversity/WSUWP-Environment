@@ -95,7 +95,7 @@ location ~ \.php$ {
     }
 
     # Include the common request limiting
-    include /etc/nginx/wsuwp-common-limit.conf
+    include /etc/nginx/wsuwp-common-limit.conf;
 
     # Include the fastcgi_params defaults provided by nginx
     include        /etc/nginx/fastcgi_params;
