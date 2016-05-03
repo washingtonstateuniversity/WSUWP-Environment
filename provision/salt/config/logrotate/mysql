@@ -19,7 +19,7 @@
 # ATTENTION: The /root/.my.cnf file should be readable
 # _ONLY_ by root !
 
-/var/lib/mysql/mysqld.log {
+/var/log/mysql/mysqld.log /var/log/mysql/mysql-slow.log {
         # create 600 mysql mysql
         notifempty
         daily
