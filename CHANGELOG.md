@@ -10,9 +10,9 @@
 
 ### Deployments
 
-* uc-proxy1: May 3, 2016
-* wsusearch-prod-01:
+* uc-proxy1: May 3, 2016 (reboot)
+* wsusearch-prod-01: May 3, 2016 (reboot)
 * wsuwp-indie-prod-01:
 * wsuwp-prod-01:
 * wsuwp-prod-02:
-* wsu-lists:
+* wsu-lists: May 3, 2016 (reboot)
