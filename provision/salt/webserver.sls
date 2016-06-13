@@ -81,6 +81,18 @@ nginx-init:
     - require:
       - cmd:    nginx
 
+# Create a directory to store SSL certificates.
+/etc/nginx/ssl/:
+  file.directory:
+    - user: root
+    - group: root
+    - mode: 644
+    - require:
+      - cmd: nginx
+    - require_in:
+      - cmd: nginx-self-signed
+      - cmd: nginx-dhparam
+
 # Setup a default self-signed certificate for invalid HTTPS requests.
 nginx-self-signed:
   cmd.run:
