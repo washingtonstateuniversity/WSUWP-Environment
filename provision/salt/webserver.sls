@@ -160,12 +160,11 @@ nginx-dhparam:
     - require:
       - cmd:    nginx
 
-# Add a common standard configuration for nginx via Jinja template
-# to be used in combination with SSL when necessary.
+# Track a wsuwp-common.conf file that will in turn include the
+# common nginx configs for a site on the WSUWP platform.
 /etc/nginx/wsuwp-common.conf:
   file.managed:
-    - template: jinja
-    - source:   salt://config/nginx/wsuwp-common.conf.jinja
+    - source:   salt://config/nginx/wsuwp-common.conf
     - user:     root
     - group:    root
     - mode:     644
