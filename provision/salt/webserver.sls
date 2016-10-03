@@ -152,7 +152,6 @@ nginx-dhparam:
 # Add a common SSL configuration for nginx
 /etc/nginx/wsuwp-ssl-common.conf:
   file.managed:
-    - template: jinja
     - source:   salt://config/nginx/wsuwp-ssl-common.conf
     - user:     root
     - group:    root
