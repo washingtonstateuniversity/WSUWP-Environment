@@ -6,7 +6,13 @@ location / {
     try_files $uri $uri/ /index.php$is_args$args;
 }
 
-location /favicon.ico {
+location = /favicon.ico {
+    access_log off;
+    log_not_found off;
+    return 404;
+}
+
+location ~ ^/apple-touch-icon(.*)\.png$ {
     access_log off;
     log_not_found off;
     return 404;
